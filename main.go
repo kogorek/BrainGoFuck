@@ -5,6 +5,8 @@ import "errors"
 
 type BrainGoFuck struct {
 	source string
+	memory []uint8
+	carretePos uint
 }
 
 func (this *BrainGoFuck) ReadFile(fileName string) error {
@@ -20,8 +22,14 @@ func (this BrainGoFuck) PrintSource() {
 	println(this.source[0])
 }
 
+func (this *BrainGoFuck) Step() {
+
+}
+
 func NewBrainGoFuck () BrainGoFuck {
-	return BrainGoFuck{""}
+	var memoryCells uint = 30000
+	var carretePos uint = 0
+	return BrainGoFuck{"", make([]uint8, memoryCells), carretePos}
 }
 
 func main() {
