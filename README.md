@@ -1,1 +1,1 @@
-BrainGoFuck
+BrainFuck language interpretator wrote in GoLang. Don't expect much from it.
